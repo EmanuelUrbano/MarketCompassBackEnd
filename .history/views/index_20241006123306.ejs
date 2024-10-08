@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto cadastro</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<%- include ('partials/header.ejs') %>
+<body class="principal">
+    <%- include ('partials/navbar.ejs') %>
+    <h1></h1>    
+    <div class="container">
+        <hr>
+        <h1 class="titulo">Mercados</h1>
+        <a class="btn btn-success" href="/cadmercado">Cadastrar mercados</a>
+        <hr>
+            <% mercado.forEach(mercado => { %>           
+            <br>            
+            <div class="card card-style">
+                <div class="card-body">
+                    <p class="titulo-mercado"><%=mercado.nome %></p>
+                    <a class="btn btn-danger" href="/excluirMercado/:id">Excluir</a>
+                    <a class="btn btn-warning" href="/editarMercado/:id">Editar Mercado</a>
+                </div>
+            </div>
+            <%})%>                   
+    </div>
+           
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="/js/bootstrap.min.js"></script>
+</body>
+<%- include ('partials/footer.ejs') %>
+</html>

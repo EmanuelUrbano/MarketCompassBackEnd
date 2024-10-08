@@ -1,0 +1,27 @@
+<%- include ('partials/header.ejs') %>
+<body class="principal">
+    <%- include ('partials/navbar.ejs') %>
+    <div class="container p-4">
+        <div class="card card-style">
+            <div class="card-header">
+                <h3 class="titulo">Edição de mercados</h3>
+            </div>
+            <hr>
+            <div class="card-body">
+                <form method="post" action="/submitEditar">
+                    <label for="" class="label">Nome do mercado</label>
+                    <input name="nome" type="text" class="form-control input-title" placeholder="Nome" value= "<%=mercado.nome%>">
+        
+                    <br>
+                    <input name="img" type="file" class="form-control input-file">Adionar ficheiro</input>
+                    <br>
+                    <br>
+                    <input type="hidden" name="id" value="<%=mercado.id%>">
+                    <button type="submit" class="btn btn-success">&crarr; Salvar</button>
+                    <a class="btn btn-success" href="/">&larr; Voltar</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include ('partials/footer.ejs') %>

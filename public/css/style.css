@@ -1,0 +1,33 @@
+.principal{
+    background-color: #3EADA4;
+}
+
+.navbar{
+    background-color: #94A21B;    
+}
+
+.card-style{
+    background-color: #94A21B;
+}
+
+.titulo-mercado{
+    font-weight: bold;
+}
+
+.input-title{
+    background-color: #3EADA4;
+}
+
+.input-title::placeholder{
+    font-weight: bold;
+    color: #182633;
+}
+
+.titulo{
+    color: #182633;
+}
+
+.label{
+    font-weight: bold;
+    color: #182633;
+}

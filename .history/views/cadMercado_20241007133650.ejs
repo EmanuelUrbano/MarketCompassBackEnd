@@ -1,0 +1,25 @@
+<%- include ('partials/header.ejs') %>
+<body class="principal">
+    <%- include ('partials/navbar.ejs') %>
+    <div class="container p-4">
+        <div class="card card-style">
+            <div class="card-header">
+                <h3 class="titulo">Cadastro de mercados</h3>
+            </div>
+            <hr>
+            <div class="card-body">
+                <form method="post" action="/submitMercado">
+                    <label for="" class="label">Nome do mercado</label>
+                    <input name="nome" type="text" class="form-control input-title" placeholder="Nome">
+                    <br>
+                    <button name="upload" type="file" class="btn btn-primary">Adionar ficheiro</button>
+                    <br>
+                    <br>
+                    <button type="submit" class="btn btn-success">&crarr; Cadastrar</button>
+                    <a class="btn btn-success" href="/">&larr; Voltar</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include ('partials/footer.ejs') %>
